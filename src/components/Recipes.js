@@ -4,15 +4,11 @@ const contentful = require("contentful");
 export default function App() {
   const [recipes, setRecipes] = useState([]);
 
-  const SPACE_ID = process.env.REACT_APP_SPACE_ID;
-  const ENVIRONMENT_ID = process.env.REACT_APP_ENVIRONMENT_ID;
-  const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
-
   useEffect(() => {
     const client = contentful.createClient({
-      space: SPACE_ID,
-      accessToken: ACCESS_TOKEN,
-      environment: ENVIRONMENT_ID,
+      space: process.env.REACT_APP_SPACE_ID,
+      accessToken: process.env.REACT_APP_ACCESS_TOKEN,
+      environment: process.env.REACT_APP_ENVIRONMENT_ID,
     });
     client
       .getEntries()
