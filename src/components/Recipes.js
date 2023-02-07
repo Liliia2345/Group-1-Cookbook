@@ -3,9 +3,6 @@ const contentful = require("contentful");
 
 export default function App() {
   const [recipes, setRecipes] = useState([]);
-  /*   const SPACE_ID = "gll392hbsiba";
-  const ENVIRONMENT_ID = "master";
-  const ACCESS_TOKEN = "uRx-_ftxy7bxQ0HBNR21Wd4zMnwguYt5HjlGaV_3lbI"; */
 
   const SPACE_ID = process.env.REACT_APP_SPACE_ID;
   const ENVIRONMENT_ID = process.env.REACT_APP_ENVIRONMENT_ID;
