@@ -1,8 +1,8 @@
 import "./App.css";
 import Header from "./components/Header";
 import Search from "./components/Search";
-import Footer from "./components/Footer";
 import Recipes from "./components/Recipes";
+import Footer from "./components/Footer";
 
 console.log(process.env);
 
