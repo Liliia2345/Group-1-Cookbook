@@ -26,7 +26,7 @@ export default function App() {
           <img
             src={recipe.fields.titleImage.fields.file.url}
             alt={recipe.fields.title}
-            style={{ width: "200px" }}
+            style={{ width: "300px" }}
           />
         </div>
       ))}
