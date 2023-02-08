@@ -4,6 +4,8 @@ import Search from "./components/Search";
 import Footer from "./components/Footer";
 import Recipes from "./components/Recipes";
 
+console.log(process.env);
+
 function App() {
   return (
     <div className="App">
