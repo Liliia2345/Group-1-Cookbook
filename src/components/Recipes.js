@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-const contentful = require("contentful");
+import { useState, useEffect } from 'react';
+const contentful = require('contentful');
 
 export default function App() {
   const [recipes, setRecipes] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const client = contentful.createClient({
@@ -11,12 +12,12 @@ export default function App() {
       environment: process.env.REACT_APP_ENVIRONMENT_ID,
     });
     client
-      .getEntries()
+      .getEntries({ query: { searchTerm } })
       .then((res) => setRecipes(res.items))
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className="App">
+    <div className='App'>
       {recipes.map((recipe) => (
         <div key={recipe.sys.id}>
           <h2>{recipe.fields.title}</h2>
@@ -26,7 +27,7 @@ export default function App() {
           <img
             src={recipe.fields.titleImage.fields.file.url}
             alt={recipe.fields.title}
-            style={{ width: "300px" }}
+            style={{ width: '300px' }}
           />
         </div>
       ))}
