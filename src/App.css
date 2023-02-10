@@ -111,12 +111,6 @@ h2 {
   background-color: #f2cc5caf;
 }
 
-.ccontainer {
-  display: flex;
-  justify-content: center;
-  background-color: #f2cc5caf;
-}
-
 .search {
   width: 25%;
   margin: 1rem 0;
