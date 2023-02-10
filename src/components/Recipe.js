@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 const contentful = require("contentful");
 
-export default function Recipes() {
+export default function Recipe() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -37,12 +36,12 @@ export default function Recipes() {
                 <h5
                   className="card-title"
                   style={{
-                    minHeight: "50px",
-                    maxHeight: "50px",
+                    minHeight: "45px",
+                    maxHeight: "45px",
                     overflow: "hidden",
                   }}
                 >
-                  {recipe.fields.title}
+                  {recipe.fields.title} sdfsdf sdfsdf sdsfd
                 </h5>
                 <div className="row text-center my-3">
                   <div className="col text-start">
@@ -60,11 +59,7 @@ export default function Recipes() {
                 >
                   {recipe.fields.shortDescription}
                 </p>
-                <Link to={`/recipe/${recipe.sys.id}`}>
-                  <button className="btn btn-warning border-0">
-                    See recipe
-                  </button>
-                </Link>
+                <button className="btn btn-warning border-0">See recipe</button>
               </div>
             </div>
           </div>
