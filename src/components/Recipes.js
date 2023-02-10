@@ -3,6 +3,7 @@ const contentful = require('contentful');
 
 export default function App() {
   const [recipes, setRecipes] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const client = contentful.createClient({
@@ -11,7 +12,7 @@ export default function App() {
       environment: process.env.REACT_APP_ENVIRONMENT_ID,
     });
     client
-      .getEntries()
+      .getEntries({ query: { searchTerm } })
       .then((res) => setRecipes(res.items))
       .catch((err) => console.log(err));
   }, []);
