@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-const contentful = require('contentful');
+import { useState, useEffect } from "react";
+const contentful = require("contentful");
 
 export default function App() {
   const [recipes, setRecipes] = useState([]);
@@ -16,35 +16,50 @@ export default function App() {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className='App container text-center mb-5'>
-      <div className='row text-center gx-1 gy-3'>
+    <div className="App container text-center mb-5">
+      <div className="row text-center gx-1 gy-3">
         {recipes.map((recipe) => (
-          <div
-            id={recipe.sys.id}
-            key={recipe.sys.id}
-            className='col'>
+          <div id={recipe.sys.id} key={recipe.sys.id} className="col">
             <div
-              className='card text-center m-auto'
-              style={{ width: '18rem' }}>
+              className="card text-light text-center m-auto"
+              style={{
+                width: "18rem",
+                backgroundColor: "#555",
+              }}
+            >
               <img
                 src={recipe.fields.titleImage.fields.file.url}
-                className='card-img-top'
+                className="card-img-top"
                 alt={recipe.fields.title}
               />
-              <div className='card-body'>
-                <h5 className='card-title'>{recipe.fields.title}</h5>
-                <div className='row text-center'>
-                  <div className='col text-start'>
+              <div className="card-body">
+                <h5
+                  className="card-title"
+                  style={{
+                    minHeight: "45px",
+                    maxHeight: "45px",
+                    overflow: "hidden",
+                  }}
+                >
+                  {recipe.fields.title} sdfsdf sdfsdf sdsfd
+                </h5>
+                <div className="row text-center my-3">
+                  <div className="col text-start">
                     {recipe.fields.rating} stars
                   </div>
-                  <div className='col text-end'>by {recipe.fields.author}</div>
+                  <div className="col text-end">by {recipe.fields.author}</div>
                 </div>
                 <p
-                  className='card-text'
-                  style={{ maxHeight: '60px' }}>
+                  className="card-text"
+                  style={{
+                    minHeight: "120px",
+                    maxHeight: "120px",
+                    overflow: "hidden",
+                  }}
+                >
                   {recipe.fields.shortDescription}
                 </p>
-                <button className='btn btn-primary mt-5'>Go to recipe</button>
+                <button className="btn btn-warning border-0">See recipe</button>
               </div>
             </div>
           </div>
