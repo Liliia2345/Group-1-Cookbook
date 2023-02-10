@@ -133,6 +133,32 @@ function Footer() {
           </div>
         </div>
       </section>
+      <section>
+        <div className='row d-flex justify-content-center align-items-center'>
+          <div className='col-auto'>
+            <p>
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <div className='col-md-5 col-12'>
+            <div class='form-outline mb-4'>
+              <input
+                type='email'
+                placeholder='Enter your Email address'
+                id='form5Example27'
+                class='form-control'
+              />
+            </div>
+          </div>
+          <div className='col-auto'>
+            <button
+              type='submit'
+              class='btn btn-sm btn-primary mb-4'>
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
       <div
         class='text-center text-black p-3'
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
