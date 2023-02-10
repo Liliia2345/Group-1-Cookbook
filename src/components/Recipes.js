@@ -3,7 +3,6 @@ const contentful = require('contentful');
 
 export default function App() {
   const [recipes, setRecipes] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const client = contentful.createClient({
@@ -12,25 +11,45 @@ export default function App() {
       environment: process.env.REACT_APP_ENVIRONMENT_ID,
     });
     client
-      .getEntries({ query: { searchTerm } })
+      .getEntries()
       .then((res) => setRecipes(res.items))
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className='App'>
-      {recipes.map((recipe) => (
-        <div key={recipe.sys.id}>
-          <h2>{recipe.fields.title}</h2>
-          <h3>{recipe.fields.author}</h3>
-          <p>{recipe.fields.shortDescription}</p>
-          <p>Rating: {recipe.fields.rating}</p>
-          <img
-            src={recipe.fields.titleImage.fields.file.url}
-            alt={recipe.fields.title}
-            style={{ width: '300px' }}
-          />
-        </div>
-      ))}
+    <div className='App container text-center mb-5'>
+      <div className='row text-center gx-1 gy-3'>
+        {recipes.map((recipe) => (
+          <div
+            id={recipe.sys.id}
+            key={recipe.sys.id}
+            className='col'>
+            <div
+              className='card text-center m-auto'
+              style={{ width: '18rem' }}>
+              <img
+                src={recipe.fields.titleImage.fields.file.url}
+                className='card-img-top'
+                alt={recipe.fields.title}
+              />
+              <div className='card-body'>
+                <h5 className='card-title'>{recipe.fields.title}</h5>
+                <div className='row text-center'>
+                  <div className='col text-start'>
+                    {recipe.fields.rating} stars
+                  </div>
+                  <div className='col text-end'>by {recipe.fields.author}</div>
+                </div>
+                <p
+                  className='card-text'
+                  style={{ maxHeight: '60px' }}>
+                  {recipe.fields.shortDescription}
+                </p>
+                <button className='btn btn-primary mt-5'>Go to recipe</button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
