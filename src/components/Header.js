@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -8,7 +9,8 @@ import myLogo from './logoCookbook.png'
 
 function Header() {
   return (
-    <Navbar className="color-nav" collapseOnSelect expand="lg" bg="#C0DEFF" variant="light" style={{width: '100%', position: 'sticky', top: 0}}>
+    <Navbar className="color-nav" collapseOnSelect expand="lg" bg="#C0DEFF" variant="light" style={{ width: "100%", position: "sticky", top: 0 }}
+    >
       <Container>
       <Navbar fixed="top" />
         <Navbar.Brand className= "brand-nav" href="#home">
@@ -18,8 +20,8 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About Us</Nav.Link>
+            <Link className="nav-link" to="/home">Home</Link>
+            <Link className="nav-link" to="/about">About Us</Link>
             <NavDropdown title="Categories" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">TOP Recipes</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -28,10 +30,8 @@ function Header() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link className="nav-link" href="#deets">Log In</Nav.Link>
-            <Nav.Link className="nav-link" eventKey={2} href="#memes">
-              Subscribe
-            </Nav.Link>
+            <Link className="nav-link" to="/login">Log In</Link>
+            <Link className="nav-link" to="/subscribe">Subscribe</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
