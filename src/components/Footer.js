@@ -89,7 +89,7 @@ function Footer() {
             <div className="form-outline mb-4">
               <input
                 type="email"
-                placeholder="Enter your Email address"
+                placeholder="Enter your email address"
                 id="form5Example27"
                 className="form-control"
               />
