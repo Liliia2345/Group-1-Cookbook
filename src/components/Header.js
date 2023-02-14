@@ -1,6 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React from "react";
+import { Link } from "react-router-dom";
 
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -11,7 +10,6 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-
     <Navbar
       className="color-nav"
       collapseOnSelect
@@ -22,29 +20,45 @@ function Header() {
     >
       <Container>
         <Navbar fixed="top" />
-        <Navbar.Brand className="brand-nav" href="#home">
-          <img
-            src={myLogo}
-            style={{ width: 65, marginTop: 2, marginRight: 20 }}
-            alt="logo"
-          />
-          Perfect Burgers
-        </Navbar.Brand>
+        <NavLink className="nav-link" to="/">
+          <Navbar.Brand className="brand-nav">
+            <img
+              src={myLogo}
+              style={{ width: 65, marginTop: 2, marginRight: 20 }}
+              alt="logo"
+            />
+            Perfect Burgers
+          </Navbar.Brand>
+        </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Link className="nav-link" to="/home">Home</Link>
-            <Link className="nav-link" to="/about">About Us</Link>
-            <NavDropdown title="Categories" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">TOP Recipes</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Latest Recipes
+            <NavLink className="nav-link" to="/">
+              Home
+            </NavLink>
+            <NavLink className="nav-link" to="/about">
+              About Us
+            </NavLink>
+            <NavDropdown title="Categories">
+              <NavDropdown.Item>
+                <NavLink className="nav-link" to="/top">
+                  TOP Recipes
+                </NavLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <NavLink className="nav-link" to="/latest">
+                  Latest Recipes
+                </NavLink>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-            <Link className="nav-link" to="/login">Log In</Link>
-            <Link className="nav-link" to="/subscribe">Subscribe</Link>
+            <NavLink className="nav-link" to="/login">
+              Log In
+            </NavLink>
+            <NavLink className="nav-link" to="/subscribe">
+              Subscribe
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
