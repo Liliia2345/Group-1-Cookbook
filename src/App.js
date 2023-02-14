@@ -22,7 +22,7 @@ function App() {
             </>
           }
         />
-        <Route path="/recipe" element={<Recipe />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
       </Routes>
       <Footer />
     </div>
