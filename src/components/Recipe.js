@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import RichText from "./RichText";
 const contentful = require("contentful");
 
 export default function Recipe() {
@@ -80,7 +81,7 @@ export default function Recipe() {
                       <div className="col-md-8 text-start">
                         <h2 className="mb-3">To do this</h2>
                         <p className="card-text">
-                          {recipe.fields.shortDescription}
+                          <RichText content={recipe.fields.description} />
                         </p>
                       </div>
                     </div>
