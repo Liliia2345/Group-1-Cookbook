@@ -42,8 +42,8 @@ function Footer() {
                 </a>
               </p>
             </div>
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
-              <h6 class="text-uppercase fw-bold mb-2">Useful links</h6>
+            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
+              <h6 className="text-uppercase fw-bold mb-2">Useful links</h6>
               <p className="m-0">
                 <a className="text-reset text-decoration-none" href="#!">
                 Settings

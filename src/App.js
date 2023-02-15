@@ -23,7 +23,7 @@ function App() {
             </>
           }
         />
-        <Route path="/recipe" element={<Recipe />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/about" element={<AboutUs />} />
       </Routes>
       <Footer />
