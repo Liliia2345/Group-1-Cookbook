@@ -6,6 +6,7 @@ import SearchResults from "./components/SearchResults";
 import Recipes from "./components/Recipes";
 import Recipe from "./components/Recipe";
 import Footer from "./components/Footer";
+import AboutUs from "./components/AboutUs";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -31,6 +32,7 @@ function App() {
         />
         <Route path="/search" element={<SearchResults query={query} />} />
         <Route path="/recipe/:id" element={<Recipe />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
       <Footer />
     </div>

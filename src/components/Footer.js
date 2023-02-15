@@ -14,10 +14,7 @@ function Footer() {
                 Perfect Burgers
               </h6>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ad
-                ullam fugit totam quisquam vel dolores itaque nihil debitis?
-                Officiis.
-              </p>
+              This page is a collection of top burger recipes from our professional chefs. Each recipe has a detailed description — so don't hesitate and try it today. It's free!</p>
             </div>
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
               <h6 className="text-uppercase fw-bold mb-2">Products</h6>
@@ -26,22 +23,22 @@ function Footer() {
                 "
               >
                 <a className="text-reset text-decoration-none" href="#!">
-                  Angular
+                Recipes
                 </a>
               </p>
               <p className="m-0">
                 <a className="text-reset text-decoration-none" href="#!">
-                  React
+                Ingredients
                 </a>
               </p>
               <p className="m-0">
                 <a className="text-reset text-decoration-none" href="#!">
-                  Vue
+                Drinks
                 </a>
               </p>
               <p className="m-0">
                 <a className="text-reset text-decoration-none" href="#!">
-                  Laravel
+                Cooking techniques
                 </a>
               </p>
             </div>
@@ -49,17 +46,12 @@ function Footer() {
               <h6 className="text-uppercase fw-bold mb-2">Useful links</h6>
               <p className="m-0">
                 <a className="text-reset text-decoration-none" href="#!">
-                  Pricing
+                Settings
                 </a>
               </p>
               <p className="m-0">
                 <a className="text-reset text-decoration-none" href="#!">
-                  Settings
-                </a>
-              </p>
-              <p className="m-0">
-                <a className="text-reset text-decoration-none" href="#!">
-                  Orders
+                  FAQ
                 </a>
               </p>
               <p className="m-0">
@@ -67,13 +59,18 @@ function Footer() {
                   Help
                 </a>
               </p>
+              <p className="m-0">
+                <a className="text-reset text-decoration-none" href="#!">
+                  Feedback
+                </a>
+              </p>
             </div>
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-2">
               <h6 className="text-uppercase fw-bold mb-2">Contact</h6>
-              <p className="m-0 text-decoration-none">New York, NY 10012, US</p>
-              <p className="m-0 text-decoration-none">info@example.com</p>
-              <p className="m-0 text-decoration-none">+ 01 234 567 88</p>
-              <p className="m-0 text-decoration-none">+ 01 234 567 89</p>
+              <p className="m-0 text-decoration-none">Berlin, Lüneburgerstr. 15b, Germany</p>
+              <p className="m-0 text-decoration-none">perfectburgers@gmail.com</p>
+              <p className="m-0 text-decoration-none">+ 49 234 567 88</p>
+              <p className="m-0 text-decoration-none">+ 49 234 567 89</p>
             </div>
           </div>
         </div>
