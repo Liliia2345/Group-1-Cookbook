@@ -26,11 +26,14 @@ body {
 
 a.title {
   text-decoration: none !important;
-  color: #fff !important;
 }
 
-a.title:hover {
-  color: gold !important;
+a.title div {
+  transition: 2s;
+}
+
+a.title:hover div {
+  filter: saturate(150%) brightness(120%);
   transition: 0.5s;
 }
 
