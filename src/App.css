@@ -29,7 +29,7 @@ a.title {
 }
 
 a.title div {
-  transition: 2s;
+  transition: 0.5s;
 }
 
 a.title:hover div {
