@@ -29,13 +29,11 @@ export default function Recipes() {
                   backgroundColor: "#555",
                 }}
               >
-                <Link to={`/recipe/${recipe.sys.id}`}>
-                  <img
-                    src={recipe.fields.titleImage.fields.file.url}
-                    className="card-img-top"
-                    alt={recipe.fields.title}
-                  />
-                </Link>
+                <img
+                  src={recipe.fields.titleImage.fields.file.url}
+                  className="card-img-top"
+                  alt={recipe.fields.title}
+                />
                 <div className="card-body">
                   <h5
                     className="card-title"
@@ -45,9 +43,7 @@ export default function Recipes() {
                       overflow: "hidden",
                     }}
                   >
-                    <Link to={`/recipe/${recipe.sys.id}`} className="title">
-                      {recipe.fields.title}
-                    </Link>
+                    {recipe.fields.title}
                   </h5>
                   <div className="row text-center my-3">
                     <div className="col text-start">
@@ -67,11 +63,9 @@ export default function Recipes() {
                   >
                     {recipe.fields.shortDescription}
                   </p>
-                  <Link to={`/recipe/${recipe.sys.id}`}>
-                    <button className="btn btn-warning border-0">
-                      See recipe
-                    </button>
-                  </Link>
+                  <button className="btn btn-warning border-0">
+                    See recipe
+                  </button>
                 </div>
               </div>
             </Link>
