@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 const contentful = require("contentful");
 
 export default function Recipes(props) {
@@ -21,7 +21,7 @@ export default function Recipes(props) {
       .catch((err) => console.log(err));
   }, [query]);
   return (
-    <div className="App container-lg text-center mb-5">
+    <div className="App container-lg text-center my-5">
       <div className="row text-center gx-3 gy-3">
         {recipes.map((recipe) => (
           <div id={recipe.sys.id} key={recipe.sys.id} className="col">

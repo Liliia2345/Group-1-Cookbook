@@ -13,7 +13,7 @@ function Search({ handleSearch }) {
     handleSearch(query);
   };
   return (
-    <div className="ccontainer mb-3">
+    <div className="ccontainer">
       <div className="search">
         <form onSubmit={handleSubmit} className="search-content">
           <input
