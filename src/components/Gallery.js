@@ -6,19 +6,19 @@ export default function Gallery() {
     <div className="gallery-container">
       <div className="images">
         <div className="image-item">
-          <h2>Perfect Burgers</h2>
+          <h2 className="gallery">Perfect Burgers</h2>
         </div>
         <div className="image-item">
-          <h2>The</h2>
+          <h2 className="gallery">The</h2>
         </div>
         <div className="image-item">
-          <h2>Place</h2>
+          <h2 className="gallery">Place</h2>
         </div>
         <div className="image-item">
-          <h2>To</h2>
+          <h2 className="gallery">To</h2>
         </div>
         <div className="image-item">
-          <h2>Be</h2>
+          <h2 className="gallery">Be</h2>
         </div>
       </div>
     </div>
