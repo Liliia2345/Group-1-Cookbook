@@ -9,7 +9,7 @@ function Search({ handleSearch }) {
   const [query, setQuery] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/search`);
+    navigate(`/search/${query}`);
     handleSearch(query);
   };
   return (
@@ -20,11 +20,6 @@ function Search({ handleSearch }) {
             placeholder="Search for recipes"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                handleSubmit(query);
-              }
-            }}
           ></input>
           <button type="submit" className="bg-transparent">
             <img src={SearchIcon} alt="search" />
