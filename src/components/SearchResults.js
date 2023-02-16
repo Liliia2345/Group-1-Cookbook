@@ -24,7 +24,7 @@ export default function Recipes(props) {
     <div className="App container-lg text-center my-5">
       <div className="row text-center gx-3 gy-3">
         {recipes.map((recipe) => (
-          <div id={recipe.sys.id} key={recipe.sys.id} className="col">
+          <div key={recipe.sys.id} className="col">
             <Link to={`/recipe/${recipe.sys.id}`} className="title">
               <div
                 className="card text-light text-center m-auto"
