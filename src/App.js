@@ -30,7 +30,10 @@ function App() {
             </>
           }
         />
-        <Route path="/search" element={<SearchResults query={query} />} />
+        <Route
+          path="/search/:query"
+          element={<SearchResults query={query} />}
+        />
         <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/about" element={<AboutUs />} />
       </Routes>

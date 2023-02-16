@@ -23,22 +23,22 @@ function Footer() {
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
               <h6 className="text-uppercase fw-bold mb-2">Products</h6>
               <p className="m-0">
-                <a className="text-reset text-decoration-none" href="#">
+                <a className="text-reset text-decoration-none" href="#!">
                   Recipes
                 </a>
               </p>
               <p className="m-0">
-                <a className="text-reset text-decoration-none" href="#">
+                <a className="text-reset text-decoration-none" href="#!">
                   Ingredients
                 </a>
               </p>
               <p className="m-0">
-                <a className="text-reset text-decoration-none" href="#">
+                <a className="text-reset text-decoration-none" href="#!">
                   Drinks
                 </a>
               </p>
               <p className="m-0">
-                <a className="text-reset text-decoration-none" href="#">
+                <a className="text-reset text-decoration-none" href="#!">
                   Cooking techniques
                 </a>
               </p>
@@ -46,22 +46,22 @@ function Footer() {
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
               <h6 className="text-uppercase fw-bold mb-2">Useful links</h6>
               <p className="m-0">
-                <a className="text-reset text-decoration-none" href="#">
+                <a className="text-reset text-decoration-none" href="#!">
                   Settings
                 </a>
               </p>
               <p className="m-0">
-                <a className="text-reset text-decoration-none" href="#">
+                <a className="text-reset text-decoration-none" href="#!">
                   FAQ
                 </a>
               </p>
               <p className="m-0">
-                <a className="text-reset text-decoration-none" href="#">
+                <a className="text-reset text-decoration-none" href="#!">
                   Help
                 </a>
               </p>
               <p className="m-0">
-                <a className="text-reset text-decoration-none" href="#">
+                <a className="text-reset text-decoration-none" href="#!">
                   Feedback
                 </a>
               </p>

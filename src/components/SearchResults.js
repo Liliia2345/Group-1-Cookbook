@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 const contentful = require("contentful");
 
 export default function Recipes(props) {
-  // const { query } = useParams();
+  const { query } = useParams();
   const [recipes, setRecipes] = useState([]);
-  const { query } = props;
+  // const { query } = props;
 
   useEffect(() => {
     const client = contentful.createClient({
@@ -30,6 +30,7 @@ export default function Recipes(props) {
                 className="card text-light text-center m-auto"
                 style={{
                   minWidth: "18rem",
+                  maxWidth: "24rem",
                   backgroundColor: "#555",
                 }}
               >

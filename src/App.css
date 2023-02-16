@@ -25,6 +25,7 @@ body {
 }
 
 a.title {
+  display: inline-block;
   text-decoration: none !important;
 }
 
