@@ -7,15 +7,15 @@ import samuel from "./Samuel.jpg";
 
 function AboutUs() {
   return (
-    <div className='about-us'>
-      <h2 style={{textAlign: "center", color:'yellow'}}>Meet our team</h2>
+    <div className='about-us my-5'>
+      <h2 style={{textAlign: "center", color:'#E9B221'}}>Meet our team</h2>
      <Carousel>
      <Carousel.Item>
        <img
          className="d-block w-30"
          src={david}
          alt="First slide"
-         style={{width:"40%", margin: "auto"}}
+         style={{width:"40%", margin: "auto", borderRadius: "20px"}}
        />
        <Carousel.Caption>
        <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', padding: '10px', borderRadius: '10px', width:"40%", margin:'auto'}}>
@@ -29,7 +29,7 @@ function AboutUs() {
          className="d-block w-30"
          src={liliia}
          alt="Second slide"
-         style={{width:"40%", margin: "auto"}}
+         style={{width:"40%", margin: "auto", borderRadius: "20px"}}
        />
 
        <Carousel.Caption>
@@ -44,7 +44,7 @@ function AboutUs() {
          className="d-block w-30"
          src={samuel}
          alt="Third slide"
-         style={{width:"40%", margin: "auto"}}
+         style={{width:"40%", margin: "auto", borderRadius: "20px"}}
        />
 
        <Carousel.Caption>

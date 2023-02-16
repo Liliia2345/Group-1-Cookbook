@@ -8,7 +8,7 @@ import Recipe from "./components/Recipe";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 function App() {
   const [query, setQuery] = useState("");
