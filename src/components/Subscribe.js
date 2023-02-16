@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
 
-function Subscribe({show, handleClose}) {
-
+function Subscribe({ show, handleClose }) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -24,13 +22,12 @@ function Subscribe({show, handleClose}) {
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
-            >
-            </Form.Group>
+            ></Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-          Cancel
+            Cancel
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Submit
