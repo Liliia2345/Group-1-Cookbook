@@ -17,11 +17,10 @@ export default function Recipe() {
       .getEntries({
         "sys.id": id,
       })
-      // .then((res) => console.log(res.items))
       .then((res) => setRecipes(res.items))
-
       .catch((err) => console.log(err));
   }, [id]);
+
   return (
     <div className="App container mt-5 mb-5 text-start">
       <div className="row">
@@ -71,8 +70,11 @@ export default function Recipe() {
                       <div className="col-md-4 text-start">
                         <h2 className="mb-3">You will use</h2>
                         <ul className="list-group list-group-flush col-10">
-                          {recipe.fields.ingredients.map((ingredient) => (
-                            <li className="list-group-item bg-transparent text-light border-0 ps-0">
+                          {recipe.fields.ingredients.map((ingredient, i) => (
+                            <li
+                              key={i}
+                              className="list-group-item bg-transparent text-light border-0 ps-0"
+                            >
                               {ingredient}
                             </li>
                           ))}
@@ -80,9 +82,9 @@ export default function Recipe() {
                       </div>
                       <div className="col-md-8 text-start">
                         <h2 className="mb-3">To do this</h2>
-                        <p className="card-text">
+                        <div className="card-text">
                           <RichText content={recipe.fields.description} />
-                        </p>
+                        </div>
                       </div>
                     </div>
                   </div>
