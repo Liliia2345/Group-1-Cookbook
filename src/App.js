@@ -7,6 +7,7 @@ import Recipes from "./components/Recipes";
 import Recipe from "./components/Recipe";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
+import Auth from "./components/Auth";
 import { useState } from "react";
 import { Routes, Route} from "react-router-dom";
 
@@ -36,6 +37,7 @@ function App() {
         />
         <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/login" element={<Auth />} />
       </Routes>
       <Footer />
     </div>
