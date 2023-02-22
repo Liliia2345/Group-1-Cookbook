@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SearchIcon from "./search.svg";
-// const contentful = require("contentful");
+import SearchIcon from "../images/search.svg";
 
 function Search({ handleSearch }) {
   const navigate = useNavigate();
